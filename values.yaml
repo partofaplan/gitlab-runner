@@ -1,0 +1,16 @@
+gitlabUrl: https://gitlab.com/
+runnerRegistrationToken: "glrt-Qbf1lqaZ1UYSkIIEbvZ3K286MQpwOjEzbm5yMQp0OjMKdTpmZno4eRg.01.1j0bw4442"
+
+runners:
+  executor: "kubernetes"
+  image: "partofaplan/custom-gitlab-runner:1.0.2"
+  config: |
+    [[runners]]
+      name = "custom-k8s-runner"
+      url = "https://gitlab.com/"
+      token = "glrt-Qbf1lqaZ1UYSkIIEbvZ3K286MQpwOjEzbm5yMQp0OjMKdTpmZno4eRg.01.1j0bw4442"
+      executor = "kubernetes"
+
+      [runners.kubernetes]
+        image = "partofaplan/custom-gitlab-runner:1.0.2"
+        namespace = "gitlab"

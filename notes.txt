@@ -1,0 +1,5 @@
+https://gitlab.com/partofaplan
+
+helm upgrade gitlab-runner --namespace gitlab \
+    --set gitlabUrl=https://gitlab.com,runnerRegistrationToken=glrt-_Lfq67hpei_C8cipX8mnT286MQpwOjEzbm5yMQp0OjMKdTpmZno4eRg.01.1j0y881n7 \
+    gitlab/gitlab-runner
