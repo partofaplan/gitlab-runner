@@ -1,6 +1,6 @@
 runners:
   executor: "kubernetes"
-  image: "partofaplan/custom-gitlab-runner:1.0.2"
+  image: "partofaplan/custom-gitlab-runner:1.0.3"
   config: |
     [[runners]]
       name = "custom-k8s-runner"
@@ -9,7 +9,7 @@ runners:
       executor = "kubernetes"
 
       [runners.kubernetes]
-        image = "partofaplan/custom-gitlab-runner:1.0.2"
+        image = "partofaplan/custom-gitlab-runner:1.0.3"
         helper_image = "gitlab/gitlab-runner-helper:arm64-latest"
         namespace = "gitlab"
 

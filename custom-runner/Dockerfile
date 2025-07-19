@@ -2,7 +2,7 @@
 FROM gitlab/gitlab-runner:alpine-v18.2.0 
 
 # Install dependencies (you can switch to a Debian/Ubuntu base if needed)
-RUN apk add --no-cache bash curl unzip openjdk11 tar git docker-cli gzip
+RUN apk add --no-cache bash curl unzip openjdk11 tar git docker-cli gzip maven
 
 # Install Helm
 ENV HELM_VERSION="v3.14.4"
