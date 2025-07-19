@@ -18,3 +18,4 @@ runners:
 serviceAccount:
   create: false
   name: gitlab-runner 
+  namespace: gitlab
