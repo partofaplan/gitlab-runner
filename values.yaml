@@ -15,6 +15,9 @@ runners:
         image = "partofaplan/custom-gitlab-runner:1.0.2"
         helper_image = "gitlab/gitlab-runner-helper:arm64-latest"
         namespace = "gitlab"
+        volumes = [
+          "/Users/zachperkins/.kube:/root/.kube:ro"
+        ]
   arch: "arm64"
 
 serviceAccount:
