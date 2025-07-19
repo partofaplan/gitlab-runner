@@ -13,11 +13,12 @@ runners:
         helper_image = "gitlab/gitlab-runner-helper:arm64-latest"
         namespace = "gitlab"
 
-        [[runners.kubernetes.volumes.host_path]]
-          name = "kubeconfig"
+        [[runners.kubernetes.volumes.secret]]
+          name = "kubeconfig-secret"
           mount_path = "/root/.kube"
           read_only = true
-          host_path = "/Users/zachperkins/.kube"
+          [runners.kubernetes.volumes.secret.items]
+            "kubeconfig-secret" = "config"
 
         [[runners.kubernetes.volumes.empty_dir]]
           name = "cache"
