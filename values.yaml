@@ -19,3 +19,5 @@ serviceAccount:
   create: false
   name: gitlab-runner 
   namespace: gitlab
+
+arch: "arm64"
