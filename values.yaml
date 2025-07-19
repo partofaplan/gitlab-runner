@@ -15,8 +15,8 @@ runners:
 
         [[runners.kubernetes.volumes.secret]]
           name = "kubeconfig-secret"
-          mount_path = "/root/.kube"
-          read_only = false
+          mount_path = "/secrets/.kube"
+          read_only = true
 
           [[runners.kubernetes.volumes.secret.item]]
             key = "config"
