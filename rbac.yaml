@@ -11,7 +11,7 @@ metadata:
   name: gitlab-runner-role
 rules:
   - apiGroups: [""]
-    resources: ["secrets", "pods", "pods/log", "pods/exec", "configmaps", "events"]
+    resources: ["secrets", "pods", "pods/log", "pods/exec", "pods/attach", "configmaps", "events"]
     verbs: ["get", "list", "watch", "create", "update", "delete"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
