@@ -17,7 +17,7 @@ runners:
           name = "kubeconfig"
           mount_path = "/root/.kube"
           read_only = true
-          host_path = "/Users/zachperkins/.kube
+          host_path = "/Users/zachperkins/.kube"
 
         [[runners.kubernetes.volumes.empty_dir]]
           name = "cache"
