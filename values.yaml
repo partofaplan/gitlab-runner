@@ -14,3 +14,7 @@ runners:
       [runners.kubernetes]
         image = "partofaplan/custom-gitlab-runner:1.0.2"
         namespace = "gitlab"
+
+serviceAccount:
+  create: false
+  name: gitlab-runner 
