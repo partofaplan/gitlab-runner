@@ -17,9 +17,11 @@ runners:
           name = "kubeconfig-secret"
           mount_path = "/root/.kube"
           read_only = true
-          [runners.kubernetes.volumes.secret.items]
-            "kubeconfig-secret" = "config"
 
+          [[runners.kubernetes.volumes.secret.item]]
+            key = "config"
+            path = "config"
+            
         [[runners.kubernetes.volumes.empty_dir]]
           name = "cache"
           mount_path = "/cache"
