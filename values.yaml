@@ -3,7 +3,7 @@ runners:
   image: "partofaplan/custom-gitlab-runner:1.0.3"
   config: |
     [[runners]]
-      name = "custom-k8s-runner-javatest"
+      name = "javatest-gitlab-runner"
       url = "https://gitlab.com/"
       executor = "kubernetes"
 
