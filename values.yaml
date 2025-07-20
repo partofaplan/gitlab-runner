@@ -1,16 +1,17 @@
 runners:
   executor: "kubernetes"
-  image: "partofaplan/custom-gitlab-runner:1.0.3"
+  image: "partofaplan/custom-gitlab-runner:1.0.4"
   config: |
     [[runners]]
       name = "javatest-gitlab-runner"
       url = "https://gitlab.com/"
       executor = "kubernetes"
-
+      token = "glrt-3YdYarmhylL9yUMxNQjZFW86MQpwOjE2cTloawp0OjMKdTpmZno4eRg.01.1j0kf9vqx"
       [runners.kubernetes]
-        image = "partofaplan/custom-gitlab-runner:1.0.3"
+        image = "partofaplan/custom-gitlab-runner:1.0.4"
         helper_image = "gitlab/gitlab-runner-helper:arm64-latest"
         namespace = "gitlab"
+        service_account = "gitlab-runner"
 
         [[runners.kubernetes.volumes.secret]]
           name = "kubeconfig-secret"
@@ -24,3 +25,10 @@ runners:
         [[runners.kubernetes.volumes.empty_dir]]
           name = "cache"
           mount_path = "/cache"
+rbac:
+  create: false
+  cluster: true
+serviceAccount:
+  create: false
+  name: gitlab-runner
+  namespace: gitlab
