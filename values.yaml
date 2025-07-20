@@ -5,7 +5,7 @@ runners:
     [[runners]]
       name = "custom-k8s-runner"
       url = "https://gitlab.com/"
-      token = "glrt-Qbf1lqaZ1UYSkIIEbvZ3K286MQpwOjEzbm5yMQp0OjMKdTpmZno4eRg.01.1j0bw4442"
+      token = "glrt-whuOMiOOuObNnRyZSf6Ao2c6MXU4bDdxCm86MQp0OjIKdTpmZno4eRg.01.1j07eyxru"
       executor = "kubernetes"
 
       [runners.kubernetes]
